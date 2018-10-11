@@ -68,7 +68,7 @@ class FeedFragment : Fragment() {
         recyclerView.addOnScrollListener(object: PaginatedScrollListener(layoutManager) {
             override fun onLoadMore(page: Int, totalItemsCount: Int) {
                 // Triggered only when new data needs to be appended to the list
-                if (totalItemsCount < adapter.itemCount) {
+                if (totalItemsCount <= adapter.itemCount) {
                     fetchFeedItems(page, false)
                 }
             }
