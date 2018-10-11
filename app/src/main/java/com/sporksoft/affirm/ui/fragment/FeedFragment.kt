@@ -30,6 +30,8 @@ class FeedFragment : Fragment() {
     private lateinit var layout: View
     private lateinit var adapter: FeedAdapter
 
+    private var queryStr: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
@@ -69,7 +71,7 @@ class FeedFragment : Fragment() {
             override fun onLoadMore(page: Int, totalItemsCount: Int) {
                 // Triggered only when new data needs to be appended to the list
                 if (totalItemsCount <= adapter.itemCount) {
-                    fetchFeedItems(page, false)
+                    fetchFeedItems(page, false, queryStr)
                 }
             }
         })
@@ -91,6 +93,7 @@ class FeedFragment : Fragment() {
             }
 
             override fun onQueryTextSubmit(query: String): Boolean {
+                queryStr = query;
                 fetchFeedItems(1, true, query)
                 return false
             }
