@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Affirm</string>
+    <string name="title_feed">Feed</string>
+    <string name="title_details">Details</string>
+    <string name="hint_search">Search</string>
+
+    <string name="flickr_key">0781344d8d941350f67af237e42a8a43</string>
+    <string name="flickr_secret">692a05b03fff2645</string>
+
+</resources>
