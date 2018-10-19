@@ -85,7 +85,7 @@ class FeedFragment : Fragment() {
         val searchManager = activity.getSystemService(Context.SEARCH_SERVICE) as SearchManager
 
         val searchView = searchItem?.getActionView() as SearchView
-        searchView?.setSearchableInfo(searchManager.getSearchableInfo(activity.getComponentName()))
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(activity.getComponentName()))
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
             override fun onQueryTextChange(newText: String): Boolean {

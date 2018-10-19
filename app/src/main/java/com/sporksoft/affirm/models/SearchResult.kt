@@ -1,18 +1,24 @@
 package com.sporksoft.affirm.models
-/*
+
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
 data class SearchResult(
-        val photos: @JvmSuppressWildcards Photos?,
+        val photos: Photos?,
         val stat: String?
 )
 
+@JsonClass(generateAdapter = true)
 data class Photos(
         val page: Int,
         val pages: String,
         val perpage: Int,
         val total: String,
-        val photo: @JvmSuppressWildcards List<Photo>?
+        val photo: List<Photo>?
 )
 
+@JsonClass(generateAdapter = true)
 data class Photo(
         val id: String,
         val owner: String,
@@ -23,8 +29,7 @@ data class Photo(
         val ispublic: Int,
         val isfriend: Int,
         val isfamily: Int,
-        val url_s: String,
+        @Json(name = "url_s") val thumbUrl: String,
         val height_s: String,
         val width_s: String
 )
-*/

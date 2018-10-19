@@ -1,23 +1,22 @@
 package com.sporksoft.affirm.web
 
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import com.sporksoft.affirm.BuildConfig
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.reflect.Modifier
+import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
 object WebServiceManager {
     const val BASE_URL = "https://api.flickr.com"
     private var webService: WebService? = null
 
-    private fun buildGson(): Gson {
-        return GsonBuilder()
-                .excludeFieldsWithModifiers(Modifier.FINAL, Modifier.TRANSIENT, Modifier.STATIC)
-                .create()
+    private fun buildMoshi(): Moshi {
+        return Moshi.Builder()
+                .add(KotlinJsonAdapterFactory())
+                .build()
     }
 
     private fun buildOkHttpClient(): OkHttpClient {
@@ -40,7 +39,7 @@ object WebServiceManager {
             val retrofit = Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .client(buildOkHttpClient())
-                    .addConverterFactory(GsonConverterFactory.create(buildGson()))
+                    .addConverterFactory(MoshiConverterFactory.create(buildMoshi()))
                     .build()
 
             webService = retrofit.create(WebService::class.java)
