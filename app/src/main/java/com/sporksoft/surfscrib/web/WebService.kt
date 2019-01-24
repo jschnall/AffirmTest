@@ -1,6 +1,6 @@
-package com.sporksoft.affirm.web
+package com.sporksoft.surfscrib.web
 
-import com.sporksoft.affirm.models.SearchResult
+import com.sporksoft.surfscrib.data.SearchResult
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

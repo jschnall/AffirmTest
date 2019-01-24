@@ -1,4 +1,4 @@
-package com.sporksoft.affirm
+package com.sporksoft.surfscrib
 
 import org.junit.Test
 

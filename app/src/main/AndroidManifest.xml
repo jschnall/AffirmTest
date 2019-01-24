@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sporksoft.affirm">
+    package="com.sporksoft.surfscrib">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -14,7 +14,7 @@
         android:configChanges="screenLayout|orientation|screenSize"
         android:launchMode="singleTop">
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name="com.sporksoft.surfscrib.ui.activity.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

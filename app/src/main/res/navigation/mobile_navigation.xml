@@ -6,14 +6,14 @@
 
     <fragment
         android:id="@+id/feedFragment"
-        android:name="com.sporksoft.affirm.ui.fragment.FeedFragment"
+        android:name="com.sporksoft.surfscrib.ui.fragment.FeedFragment"
         android:label="@string/title_feed"
         tools:layout="@layout/fragment_feed" >
     </fragment>
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.sporksoft.affirm.ui.fragment.DetailsFragment"
+        android:name="com.sporksoft.surfscrib.ui.fragment.DetailsFragment"
         android:label="@string/title_details"
         tools:layout="@layout/fragment_feed" >
     </fragment>

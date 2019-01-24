@@ -1,14 +1,13 @@
-package com.sporksoft.affirm.ui.fragment
+package com.sporksoft.surfscrib.ui.fragment
 
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.sporksoft.affirm.R
-import com.sporksoft.affirm.helper.extensions.loadUrl
-import com.squareup.picasso.Picasso
+import com.sporksoft.surfscrib.R
+import com.sporksoft.surfscrib.helper.extension.loadUrl
 import kotlinx.android.synthetic.main.fragment_details.*
 
 

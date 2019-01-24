@@ -1,4 +1,4 @@
-package com.sporksoft.affirm.models
+package com.sporksoft.surfscrib.data
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,7 +29,7 @@ data class Photo(
         val ispublic: Int,
         val isfriend: Int,
         val isfamily: Int,
-        @Json(name = "url_s") val thumbUrl: String,
+        @Json(name = "url_s") val thumbUrl: String?,
         val height_s: String,
         val width_s: String
 )
